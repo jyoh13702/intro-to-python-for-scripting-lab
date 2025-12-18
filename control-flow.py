@@ -81,9 +81,9 @@ def determine_season():
             season = "Winter"
         elif (month == 3 and day >= 20) or (month == 6 and day <= 20) or (month < 6 and day < 31):
             season = "Spring"
-        elif (month == 6 and day >= 21) or (month <= 9 and day <= 21):
+        elif (month == 6 and day >= 21) or (month == 9 and day <= 21) or (month < 9 and day < 31):
             season = "Summer"
-        elif (month == 9 and day >= 22) or (month <= 12 and day <= 20):
+        elif (month == 9 and day >= 22) or (month == 12 and day <= 20) or (month < 12 and day < 31):
             season = "Fall"
         else:
             print(f"Error: Invalid date entered: {month_str} {day_str}")
