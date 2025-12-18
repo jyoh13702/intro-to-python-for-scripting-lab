@@ -60,7 +60,9 @@ def weather_advice():
         print("Wear a warm coat.")
     elif not is_cold and is_raining:
         print("Carry an umbrella.")
-    else: # not is_cold and not is_raining
+    elif not is_cold and not is_raining:
         print("Wear light clothing.")
+    else:
+        print("Please enter yes or no.")
 # Call the function
 weather_advice()
