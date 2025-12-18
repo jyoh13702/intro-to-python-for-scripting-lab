@@ -118,8 +118,10 @@ def guess_number():
                     print("Guess is too high.")
             else:
                 if not (attempt < max_attempts):
+                    print("Last Chance.")
         except ValueError:
             print("Invalid input. Please enter a whole number.")
+
     print(f"Sorry, you failed to guess the number {target_Number}")
 # Call the function
 guess_number()
