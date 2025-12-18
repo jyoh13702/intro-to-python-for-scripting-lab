@@ -77,7 +77,7 @@ def determine_season():
         }
         month = month_map[month_str.capitalize()]
         season = ""
-        if (month == 12 and day >= 21) or (month <= 3 and day <= 19):
+        if (month == 12 and day >= 21) or (month == 3 and day <= 19) or (month < 3 and day <31):
             season = "Winter"
         elif (month == 3 and day >= 20) or (month <= 6 and day <= 20):
             season = "Spring"
