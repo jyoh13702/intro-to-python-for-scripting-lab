@@ -40,7 +40,7 @@ def calculate_dog_years():
             print("Age cannot be a negative number.")
             return
         if human_Age <= 2:
-            dog_Years = human_age * 10
+            dog_Years = human_Age * 10
         else: 
             dog_Years = 20 + (human_Age - 2) * 7
         print(f"The dog's age in dog years is {dog_Years}.")
