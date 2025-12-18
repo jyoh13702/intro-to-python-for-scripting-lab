@@ -15,15 +15,17 @@ check_letter()
 
 def check_voting_eligibility():
     Voting_Age = 18
-    Age = int(input("Please enter your age: "))
-    try: 
-        if Age < 0:
-            print("Age cannot be negative.")
-        elif Age >= Voting_Age:
-            print("You are eligible to vote.")
-        else:
-            print("You are not eligible to vote.")
-    except ValueError:
-        print("Input a valid age.")
+    Age = input("Please enter your age: ")
+    while True:    
+        try: 
+            age = int(Age)
+            if age < 0:
+                print("Age cannot be negative.")
+            elif age >= Voting_Age:
+                print("You are eligible to vote.")
+            else:
+                print("You are not eligible to vote.")
+        except ValueError:
+            print("Input a valid age.")
 # Call the function
 check_voting_eligibility()
