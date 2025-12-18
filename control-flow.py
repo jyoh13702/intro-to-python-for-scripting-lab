@@ -97,3 +97,29 @@ def determine_season():
         print("Error: Invalid month input. Please use a three-character abbreviation (Jan - Dec).")
 # Call the function
 determine_season()
+
+def guess_number():
+    target_Number = 11
+    max_attempts = 5
+    print(f"Guess a number between 1 and 100. You have {max_attempts} attempts.")
+    for attempt in range(1, max_attempts + 1):
+        try:
+            guess = int(input(f"Attempt {attempt}: Enter your guess: "))
+            if not (1 <= guess <= 100):
+                print("Your guess is outside the 1 to 100 range. Please enter a valid guess.")
+                continue
+            if guess == target_Number:
+                print("Congratulations, you guessed correct!")
+                return
+            if attempt < max_attempts:
+                if guess < target_Number:
+                    print("Guess is too low.")
+                elif guess > target_Number:
+                    print("Guess is too high.")
+            else:
+                if not (attempt < max_attempts):
+        except ValueError:
+            print("Invalid input. Please enter a whole number.")
+    print(f"Sorry, you failed to guess the number {target_Number}")
+# Call the function
+guess_number()
