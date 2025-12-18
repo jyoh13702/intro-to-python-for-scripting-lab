@@ -48,3 +48,19 @@ def calculate_dog_years():
         print("Please input a valid age.")
 # Call the function
 calculate_dog_years()
+
+def weather_advice():
+    is_cold = input("Is it cold out? (yes/no): ").strip().lower()
+    is_raining = input("Is it raining out? (yes/no): ").strip().lower()
+    is_cold = (is_cold == 'yes')
+    is_raining = (is_raining == 'yes')
+    if is_cold and is_raining:
+        print("Wear a waterproof coat.")
+    elif is_cold and not is_raining:
+        print("Wear a warm coat.")
+    elif not is_cold and is_raining:
+        print("Carry an umbrella.")
+    else: # not is_cold and not is_raining
+        print("Wear light clothing.")
+# Call the function
+weather_advice()
