@@ -60,9 +60,39 @@ def weather_advice():
         print("Wear a warm coat.")
     elif not is_cold and is_raining:
         print("Carry an umbrella.")
-    elif not is_cold and not is_raining:
-        print("Wear light clothing.")
     else:
-        print("Please enter yes or no.")
+        print("Wear light clothing.")
 # Call the function
 weather_advice()
+
+def determine_season():
+    month_str = input("Enter the month of the year (Jan - Dec): ")
+    day_str = input("Enter the day of the month: ")
+    try:
+        day = int(day_str)
+        month_map = {
+            'Jan': 1, 'Feb': 2, 'Mar': 3, 'Apr': 4,
+            'May': 5, 'Jun': 6, 'Jul': 7, 'Aug': 8,
+            'Sep': 9, 'Oct': 10, 'Nov': 11, 'Dec': 12
+        }
+        month = month_map[month_str.capitalize()]
+        season = ""
+        if (month == 12 and day >= 21) or (month <= 3 and day <= 19):
+            season = "Winter"
+        elif (month == 3 and day >= 20) or (month <= 6 and day <= 20):
+            season = "Spring"
+        elif (month == 6 and day >= 21) or (month <= 9 and day <= 21):
+            season = "Summer"
+        elif (month == 9 and day >= 22) or (month <= 12 and day <= 20):
+            season = "Fall"
+        else:
+            print(f"Error: Invalid date entered: {month_str} {day_str}")
+            return
+        print(f"{month_str.capitalize()} {day_str} is in {season}.")
+
+    except ValueError:
+        print("Error: Invalid day input. Please enter a number.")
+    except KeyError:
+        print("Error: Invalid month input. Please use a three-character abbreviation (Jan - Dec).")
+# Call the function
+determine_season()
