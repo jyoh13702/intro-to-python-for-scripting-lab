@@ -31,3 +31,20 @@ def check_voting_eligibility():
         break
 # Call the function
 check_voting_eligibility()
+
+def calculate_dog_years():
+    user_input = input("Input the dog's age: ")
+    try:
+        human_Age = int(user_input)
+        if human_Age < 0:
+            print("Age cannot be a negative number.")
+            return
+        if human_Age <= 2:
+            dog_Years = human_age * 10
+        else: 
+            dog_Years = 20 + (human_Age - 2) * 7
+        print(f"The dog's age in dog years is {dog_Years}.")
+    except ValueError:
+        print("Please input a valid age.")
+# Call the function
+calculate_dog_years()
