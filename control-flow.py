@@ -28,5 +28,6 @@ def check_voting_eligibility():
             break
         except ValueError:
             print("Input a valid age.")
+        break
 # Call the function
 check_voting_eligibility()
